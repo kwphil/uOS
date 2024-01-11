@@ -19,6 +19,8 @@
  * OS created by: kwphil     *
  *****************************/
 
+#include <stdint.h>
+
 #define VGA_BUF 0xb8000
 
 int _start() {
@@ -28,8 +30,9 @@ int _start() {
 }
 
 int vga_print(char *input, ) {
-    register curr_offset;
-    __asm__("addi %0,0,[1]");
+    register uint8_t curr_offset;
+    __asm__("addi %0,0,[1]"
+            : curr_offset);
     
-    for
+    for(uint8_t i = 0; i < )
 }
