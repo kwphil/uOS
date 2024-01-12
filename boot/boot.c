@@ -24,15 +24,7 @@
 #define VGA_BUF 0xb8000
 
 int _start() {
-    *(char *)VGA_BUF = "strt bt";
+    *(char *)VGA_BUF = "s\0t\0r\0t\0 \0b\0t\0";
 
     
-}
-
-int vga_print(char *input, ) {
-    register uint8_t curr_offset;
-    __asm__("addi %0,0,[1]"
-            : curr_offset);
-    
-    for(uint8_t i = 0; i < )
 }
