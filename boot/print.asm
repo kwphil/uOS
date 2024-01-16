@@ -1,5 +1,5 @@
 ; r3 is memory location to print
-; r29-r31 are occupied
+; r30 and r31 are occupied
 
 print:
     li r31, r3

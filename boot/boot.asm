@@ -19,9 +19,6 @@
 ; OS created by: kwphil     *
 ;****************************
 
-.section ".bss"
-    .lcomm padding, 510 - (.-_start)
-
 .section ".text"
 .global _start
 
@@ -30,7 +27,12 @@ _start:
     li r3, bootMsg
     bl print
 
+    
+
 .include "print.asm"
+
+.section ".bss"
+    .lcomm padding, 510 - (_start-.)
 
 bootMsg:
     .string "strt bt"
