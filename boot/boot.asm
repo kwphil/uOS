@@ -28,8 +28,7 @@ _start:
     li r3, bootMsg
     bl print
 
-    ; Load the OS
-    
+    ;
 end:
     b end
 
