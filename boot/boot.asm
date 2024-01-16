@@ -23,11 +23,15 @@
 .global _start
 
 _start:
+    ; Print starting msg
     lfs r3, bootMsg
     li r3, bootMsg
     bl print
 
+    ; Load the OS
     
+end:
+    b end
 
 .include "print.asm"
 
