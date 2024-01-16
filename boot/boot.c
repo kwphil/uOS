@@ -19,9 +19,9 @@
  * OS created by: kwphil     *
  *****************************/
 
-#include <stdint.h>
-
 #define VGA_BUF 0xb8000
+
+register unsigned char print_counter = 0;
 
 int _start() {
     *(char *)VGA_BUF = "s\0t\0r\0t\0 \0b\0t\0";
