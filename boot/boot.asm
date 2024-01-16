@@ -19,16 +19,20 @@
 ; OS created by: kwphil     *
 ;****************************
 
+.section ".bss"
+    .lcomm padding, 510 - (.-_start)
+
+.section ".text"
 .global _start
 
 _start:
-    lfs r3, ha16(bootMsg)
-
-    lwz r3, 0
+    lfs r3, bootMsg
     li r3, bootMsg
-    bl printlp
+    bl print
 
 .include "print.asm"
 
 bootMsg:
     .string "strt bt"
+
+.word 0xaa55
